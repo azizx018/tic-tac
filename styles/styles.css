@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: 'Raleway', 'sans-serif';
+    color:blueviolet;
+    background-color: antiquewhite;
+}
+#main-header{
+    background-color:coral;
+    color: aliceblue;
+    padding: 2rem 5%;
+    text-align: center;
+}
+.btn {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    background-color: coral;
+    border: 1px solid coral;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.btn-alt {
+    background-color: transparent;
+    border-color: transparent;
+    color: coral;
+
+}
+.btn:hover {
+    background-color: blueviolet;
+    border-color: blueviolet;
+
+}
+.btn-alt:hover {
+    background-color: aliceblue;
+    border-color: transparent;
+
+}

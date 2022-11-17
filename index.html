@@ -5,23 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/overlays.css">
+<link rel="stylesheet" href="styles/config.css">
 </head>
 <body>
-    <header>
+    <div id="backdrop"></div>
+    <header id="main-header">
         <h1>Let's Play Tic Tac Toe</h1>
         <p>Built with HTML, CSS, JS</p>
     </header>
     <main>
-        <aside>
+        <aside class="modal" id="config-overlay">
             <h2>Choose your name</h2>
             <form>
-                <div>
+                <div class="form-control">
                     <label for="playerName">Player Name</label>
                     <input type="text" name="username" id="playerName">
                 </div>
                 <div>
-                    <button type="submit">Confirm</button>
-                    <button type="submit">Cancel</button>
+                    <button type="submit" class="btn">Confirm</button>
+                    <button type="submit" class="btn btn-alt">Cancel</button>
                 </div>
             </form>
         </aside>
@@ -30,19 +37,19 @@
                 <li>
                     <article><h2>Player 1</h2>
                         <h3>PLAYER NAME</h3>
-                        <p>X</p>
-                        <button>Edit</button>
+                        <p class="player-symbol">X</p>
+                        <button class="btn btn-alt">Edit</button>
                     </article>
                 </li>
                 <li>
                     <article><h2>Player 2</h2>
                         <h3>PLAYER NAME</h3>
-                        <p>O</p>
-                        <button>Edit</button>
+                        <p class="player-symbol">O</p>
+                        <button class="btn btn-alt">Edit</button>
                     </article>
                 </li>
             </ol>
-            <button>Start New Game</button>
+            <button class="btn">Start New Game</button>
 
         </section>
         <section id="active-game">

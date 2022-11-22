@@ -25,35 +25,36 @@
     <main>
         <aside class="modal" id="config-overlay">
             <h2>Choose your name</h2>
-            <form>
+            <form >
                 <div class="form-control">
                     <label for="playerName">Player Name</label>
-                    <input type="text" name="username" id="playerName">
+                    <input type="text" name="playerName" id="playerName" required>
                 </div>
+                <p id="config-error"></p>
                 <div>
                     <button type="submit" class="btn">Confirm</button>
-                    <button type="submit" class="btn btn-alt" id="cancel-config-btn">Cancel</button>
+                    <button type="reset" class="btn btn-alt" id="cancel-config-btn">Cancel</button>
                 </div>
             </form>
         </aside>
         <section id="game-configuration">
             <ol>
                 <li>
-                    <article><h2>Player 1</h2>
+                    <article id="player-1-data"><h2>Player 1</h2>
                         <h3>PLAYER NAME</h3>
                         <p class="player-symbol">X</p>
-                        <button class="btn btn-alt" id="player1-edit">Edit</button>
+                        <button class="btn btn-alt" id="player1-edit" data-playerid="1">Edit</button>
                     </article>
                 </li>
                 <li>
-                    <article><h2>Player 2</h2>
+                    <article id="player-2-data"><h2>Player 2</h2>
                         <h3>PLAYER NAME</h3>
                         <p class="player-symbol">O</p>
-                        <button class="btn btn-alt" id="player2-edit">Edit</button>
+                        <button class="btn btn-alt" id="player2-edit" data-playerid="2">Edit</button>
                     </article>
                 </li>
             </ol>
-            <button class="btn">Start New Game</button>
+            <button class="btn" id="start-game-btn">Start New Game</button>
 
         </section>
         <section id="active-game">
@@ -63,17 +64,17 @@
             </article>
             <p>It is your turn <span id="active-player-name">PLAYER NAME</span></p>
             <ol id="game-board">
-                <li class="disabled">X</li>
-                <li></li>
-                <li></li>
+                <li data-col="1" data-row="1"></li>
+                <li data-col="2" data-row="1"></li>
+                <li data-col="3" data-row="1"></li>
                 
-                <li></li>
-                <li class="disabled">O</li>
-                <li></li>
+                <li data-col="1" data-row="2"></li>
+                <li data-col="2" data-row="2"></li>
+                <li data-col="3" data-row="2"></li>
 
-                <li></li>
-                <li></li>
-                <li></li>
+                <li data-col="1" data-row="3"></li>
+                <li data-col="2" data-row="3"></li>
+                <li data-col="3" data-row="3"></li>
             </ol>
         </section>
     </main>
